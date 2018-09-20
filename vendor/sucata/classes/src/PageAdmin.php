@@ -1,6 +1,6 @@
 <?php
 
-namespace Eletronic;
+namespace Sucata;
 
 class PageAdmin extends Page
 {

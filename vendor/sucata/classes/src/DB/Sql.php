@@ -1,6 +1,6 @@
 <?php 
 
-namespace Eletronic\DB;
+namespace Sucata\DB;
 
 class Sql {
 

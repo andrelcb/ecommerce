@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Eletronic\\": "vendor\\eletronic\\classes\\src"
+            "Sucata\\": "vendor\\sucata\\classes\\src"
         }
     }
 }
