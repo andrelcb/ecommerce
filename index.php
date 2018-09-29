@@ -1,5 +1,8 @@
 <?php 
 
+//setando sessoes
+session_start();
+
 require_once("vendor/autoload.php");
 
 use \Slim\Slim;
@@ -23,10 +26,11 @@ $app->get('/', function()
 //rota para admin
 $app->get('/admin', function()
 {
+    Usuario::verificaLogin();
+    
     $page = new PageAdmin();
 
     $page->setTpl("index");
-
 });
 
 //rota para login
@@ -46,6 +50,14 @@ $app->post('/admin/login', function()
 {
     Usuario::login($_POST);
     header("location: /admin");
+    exit;
+});
+
+$app->get("/admin/sair", function()
+{
+    Usuario::sair();
+
+    header("Location: /admin/login");
     exit;
 });
 
