@@ -1,5 +1,4 @@
 (function($){
-
         // Slidder home 4
         if($('#bxslider-home4').length >0){
             var slider = $('#bxslider-home4').bxSlider({
